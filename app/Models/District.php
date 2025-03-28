@@ -13,22 +13,11 @@ class District extends Model
     protected $fillable =
     [
         'name',
-        'department_id'
+        'municipality_id'
     ];
 
-
-
-    //CADA distrito PERTENECE A UN departamento
-    public function department():BelongsTo
+    public function municipality(): BelongsTo
     {
         return $this->belongsTo(Department::class);
     }
-
-    //el distrito tiene muchos municipios
-    public function municipalities():HasMany
-    {
-         return $this->hasMany(Municipality::class);
-    }
-
-
 }

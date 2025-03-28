@@ -4,17 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use App\Models\District;
 
-class Municipality extends Model
+class Customer extends Model
 {
     protected $fillable = [
         'name',
-        'department_id'
+        'district_id'
     ];
 
-    public function department(): BelongsTo
+    public function district(): BelongsTo
     {
-        return $this->belongsTo(Department::class);
+        return $this->belongsTo(District::class);
     }
 }
