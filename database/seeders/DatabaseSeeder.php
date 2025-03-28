@@ -25,8 +25,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             RoleSeeder::class,
             DepartmentSeeder::class,
+            MunicipalitySeeder::class,
             DistrictSeeder::class,
-            MunicipalitySeeder::class
         ]);
 
         Customer::factory(10)->create();

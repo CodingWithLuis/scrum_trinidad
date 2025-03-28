@@ -18,7 +18,7 @@ class CustomerFactory extends Factory
     {
         return [
             'name' => fake()->name(),
-            'district' => rand(1, 10)
+            'district_id' => rand(1, 10)
         ];
     }
 }

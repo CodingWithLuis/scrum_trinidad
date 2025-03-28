@@ -16,12 +16,11 @@ class CustomerApiController extends Controller
                 return [
                     'id' => $customer->id,
                     'name' => $customer->name,
-                    'email' => $customer->email,
                     'district' => $customer->district->name ?? 'N/A',
                     'municipality' => $customer->district->municipality->name ?? 'N/A',
                     'department' => $customer->district->municipality->department->name ?? 'N/A',
                 ];
-            });;
+            });
 
         return response()->json(['data' => $data]);
     }

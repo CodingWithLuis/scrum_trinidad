@@ -18,6 +18,6 @@ class District extends Model
 
     public function municipality(): BelongsTo
     {
-        return $this->belongsTo(Department::class);
+        return $this->belongsTo(Municipality::class);
     }
 }

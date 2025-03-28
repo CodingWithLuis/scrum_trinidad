@@ -23,6 +23,11 @@ const mainNavItems: NavItem[] = [
         href: '/categories',
         icon: ListChecks,
     },
+    {
+        title: 'Clientes',
+        href: '/customers',
+        icon: ListChecks,
+    },
 ];
 
 // const footerNavItems: NavItem[] = [
