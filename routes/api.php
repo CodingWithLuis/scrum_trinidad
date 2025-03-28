@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\CustomerApiController;
 use App\Http\Controllers\Api\RoleApiController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
@@ -12,3 +13,5 @@ Route::get('/user', function (Request $request) {
 
 Route::get('/users/getUsersData', [UserController::class, 'getUsersData']);
 Route::apiResource('roles', RoleApiController::class)->only('index');
+
+Route::apiResource('customers', CustomerApiController::class)->only('index');

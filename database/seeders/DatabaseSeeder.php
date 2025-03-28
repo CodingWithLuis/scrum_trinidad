@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Customer;
 use App\Models\District;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -27,5 +28,7 @@ class DatabaseSeeder extends Seeder
             DistrictSeeder::class,
             MunicipalitySeeder::class
         ]);
+
+        Customer::factory(10)->create();
     }
 }
