@@ -16,9 +16,7 @@ class CustomerApiController extends Controller
                 return [
                     'id' => $customer->id,
                     'name' => $customer->name,
-                    'district' => $customer->district->name ?? 'N/A',
-                    'municipality' => $customer->district->municipality->name ?? 'N/A',
-                    'department' => $customer->district->municipality->department->name ?? 'N/A',
+                    'district' => $customer->district->name . ", " . $customer->district->municipality->name . ", " . $customer->district->municipality->department->name
                 ];
             });
 

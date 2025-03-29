@@ -23,8 +23,6 @@ export default function Customers() {
     const columns = [
         { data: 'name' },
         { data: 'district' },
-        { data: 'municipality' },
-        { data: 'department' }
     ];
 
     return (
@@ -50,8 +48,6 @@ export default function Customers() {
                         <tr>
                             <th>Cliente</th>
                             <th>Distrito</th>
-                            <th>Municipio</th>
-                            <th>Departamento</th>
                         </tr>
                     </thead>
                 </DataTable>
